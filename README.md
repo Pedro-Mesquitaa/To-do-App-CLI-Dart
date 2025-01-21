@@ -1,2 +1,2 @@
 # To-do-App-CLI-Dart
-Este projeto consiste na criação de uma aplicação de lista de tarefas (To-Do List) executada diretamente no console. O objetivo principal é oferecer uma experiência interativa, onde os usuários possam adicionar, listar, marcar como concluídas, e remover tarefas
+This project consists of creating a To-Do List application that runs directly on the console. The main goal is to provide an interactive experience where users can add, list, mark as completed, and remove tasks.
