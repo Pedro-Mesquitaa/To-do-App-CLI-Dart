@@ -1,0 +1,5 @@
+name: to_do_App
+version: 1.0.0
+
+environment:
+  sdk: ^3.6.0

@@ -1,0 +1,15 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "to_do_App",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.6"
+    }
+  ],
+  "generated": "2025-01-22T16:17:26.123759Z",
+  "generator": "pub",
+  "generatorVersion": "3.6.1",
+  "pubCache": "file:///home/pedro/.pub-cache"
+}
