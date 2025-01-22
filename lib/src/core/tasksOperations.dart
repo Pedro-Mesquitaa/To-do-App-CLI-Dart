@@ -6,13 +6,13 @@ Future<void> addTask() async {
   print("Describe your task:");
   String taskInput = stdin.readLineSync() ?? "none";
 
-  await addInArchive("config/task.json", taskInput); 
+  await addInArchive("lib/src/core/config/task.json", taskInput); 
 
   print("\nTask added successfully!");
 }
 
 Future<void> listTask() async {
-  Map<String, dynamic> tasks = await jsonToMap("config/task.json");
+  Map<String, dynamic> tasks = await jsonToMap("lib/src/core/config/task.json");
 
 
   if (tasks.isEmpty) {
