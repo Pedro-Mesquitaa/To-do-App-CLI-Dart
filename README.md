@@ -49,7 +49,7 @@ Este é um aplicativo de linha de comando simples desenvolvido em Dart para gere
    - Marcar uma tarefa como concluída (substitua `<índice>` pelo índice da tarefa):
 
      ```bash
-      bin/To_Do_Linuxt check-task <índice>
+      bin/To_Do_Linux check-task <índice>
      ```
 
    - Remover uma tarefa (substitua `<índice>` pelo índice da tarefa):
