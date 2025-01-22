@@ -1,9 +1,9 @@
 import '../utils/json.dart';
 
 save() async {
-  var data = await jsonToMap("lib/src/core/config/task.json");
+  var data = await jsonToMap("../lib/src/core/config/task.json");
 
-   await createJsonFile("lib/src/core/backup/backup.json", data);
+   await createJsonFile("../lib/src/core/backup/backup.json", data);
 } 
 
 Future<void> addInArchive(String archive, String task) async {
@@ -14,11 +14,11 @@ Future<void> addInArchive(String archive, String task) async {
 
   jsonFile.putIfAbsent(counter.toString(), () => task);
 
-  writeInJson(jsonFile, "lib/src/core/config/task.json");
+  writeInJson(jsonFile, "../lib/src/core/config/task.json");
 }
 
 Future<int> _addCounter() async{
-  var jsonFile = await jsonToMap("lib/src/core/config/counter.json");
+  var jsonFile = await jsonToMap("../lib/src/core/config/counter.json");
 
   List<String> counterString = List.from(jsonFile.values.toList());
 
@@ -28,7 +28,7 @@ Future<int> _addCounter() async{
 
   jsonFile.update("k", (value) => counterString[0]);
 
-  writeInJson(jsonFile, "lib/src/core/config/counter.json");
+  writeInJson(jsonFile, "../lib/src/core/config/counter.json");
 
   return counter;
 }
