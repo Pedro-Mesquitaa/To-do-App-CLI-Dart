@@ -37,31 +37,31 @@ Este é um aplicativo de linha de comando simples desenvolvido em Dart para gere
    - Adicionar uma tarefa:
 
      ```bash
-     dart bin/To_Do_Linux add
+       bin/To_Do_Linux add
      ```
 
    - Listar todas as tarefas:
 
      ```bash
-     dart bin/To_Do_Linux list-tasks
+      bin/To_Do_Linux list-tasks
      ```
 
    - Marcar uma tarefa como concluída (substitua `<índice>` pelo índice da tarefa):
 
      ```bash
-     dart bin/To_Do_Linuxt check-task <índice>
+      bin/To_Do_Linuxt check-task <índice>
      ```
 
    - Remover uma tarefa (substitua `<índice>` pelo índice da tarefa):
 
      ```bash
-     dart bin/To_Do_Linux remove <índice>
+      bin/To_Do_Linux remove <índice>
      ```
 
    - Salvar as tarefas:
 
      ```bash
-     dart bin/To_Do_Linux save
+      bin/To_Do_Linux save
      ```
 
 4. **Comando de ajuda:**
@@ -69,7 +69,7 @@ Este é um aplicativo de linha de comando simples desenvolvido em Dart para gere
    Para mais informações sobre como usar o aplicativo, execute:
 
    ```bash
-   dart bin/To_Do_Linux --help
+    bin/To_Do_Linux --help
    ```
 
 ## Como funciona
