@@ -22,10 +22,45 @@ Future<void> listTask() async {
   }
 }
 
-checkTask(int index) {
-  //IMPLEMENTAR DEPOIS!!
+
+Future<void> checkTask(int index) async {
+  Map<String, dynamic> tasks = await jsonToMap("lib/src/core/config/task.json");
+
+ 
+  Iterable<int> intKeys = tasks.keys
+      .where((key) => int.tryParse(key) != null) 
+      .map((key) => int.parse(key));
+
+  for (int i in intKeys) {
+    if (i == index) {
+      await removeTask(i);
+      return; 
+    }
+  }
+
+
+  print("\nEnter a valid index");
+  exit(1);
 }
 
-removeTask(int index) {
-  //IMPLEMENTAR DEPOIS!!
+Future<void> removeTask(int index) async {
+  Map<String, dynamic> tasks = await jsonToMap("lib/src/core/config/task.json");
+
+  Iterable<int> intKeys = tasks.keys
+      .where((key) => int.tryParse(key) != null) 
+      .map((key) => int.parse(key)); 
+
+  for (int i in intKeys) {
+    if (i == index) {
+      tasks.remove(i.toString()); 
+      await overwriteInJson(tasks, "lib/src/core/config/task.json");
+
+      print("Task removed successfully");
+      return; 
+    }
+  }
+
+
+  print("\nEnter a valid index");
+  exit(1);
 }

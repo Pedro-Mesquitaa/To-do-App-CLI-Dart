@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'tasksOperations.dart';
+import 'archives.dart';
 
 void main(List<String> args) async {
   
@@ -37,7 +38,7 @@ void main(List<String> args) async {
         exit(1);
       }
       try {
-        checkTask(int.parse(args[1]));
+        await checkTask(int.parse(args[1]));
       } catch (e) {
         print("An error occurred while checking the task: $e");
         exit(1);
@@ -51,7 +52,7 @@ void main(List<String> args) async {
         exit(1);
       }
       try {
-        removeTask(int.parse(args[1]));
+        await removeTask(int.parse(args[1]));
       } catch (e) {
         print("An error occurred while removing the task: $e");
         exit(1);
@@ -60,7 +61,7 @@ void main(List<String> args) async {
 
     case "save":
       try {
-        //save(); //IMPLEMENTAR DEPOIS!!!!
+        await save();
       } catch (e) {
         print("An error occurred while saving tasks: $e");
         exit(1);

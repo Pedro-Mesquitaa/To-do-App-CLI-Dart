@@ -1,6 +1,10 @@
 import '../utils/json.dart';
 
-//save(){} IMPLEMENTAR DEPOIS!
+save() async {
+  var data = await jsonToMap("lib/src/core/config/task.json");
+
+   await createJsonFile("lib/src/core/backup/backup.json", data);
+} 
 
 Future<void> addInArchive(String archive, String task) async {
 
@@ -27,4 +31,15 @@ Future<int> _addCounter() async{
   writeInJson(jsonFile, "lib/src/core/config/counter.json");
 
   return counter;
+}
+
+Future<void> createJsonFile(String filePath, Map<String, dynamic> data) async {
+  try {
+    
+    await overwriteInJson(data, filePath);
+
+    print('Archive json saved!');
+  } catch (e) {
+    print('Error to create JSON file: $e');
+  }
 }
