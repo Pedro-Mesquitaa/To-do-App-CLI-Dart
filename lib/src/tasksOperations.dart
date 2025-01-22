@@ -3,6 +3,6 @@ addTask() {}
 
 listTask() {}
 
-checkTask(int? index) {}
+checkTask(int index) {}
 
-removeTask(int? index) {}
+removeTask(int index) {}
