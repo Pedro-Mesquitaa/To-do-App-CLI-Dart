@@ -93,4 +93,3 @@ Sinta-se à vontade para contribuir com melhorias no projeto! Para isso, siga os
 ---
 
 Para mais detalhes sobre o funcionamento do código, veja os arquivos dentro da pasta `lib` ou visite o repositório no GitHub.
-```
