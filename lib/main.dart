@@ -32,7 +32,7 @@ void main(List<String> args) {
       break;
 
     case "check-task":
-    //verificação de indice = null
+    //verificação se o indice é hábito a passar para int
       if (args.length < 2 || int.tryParse(args[1]) == null) {
         print("Error: 'check-task' requires a valid task index.");
         exit(1);
@@ -46,7 +46,7 @@ void main(List<String> args) {
       break;
 
     case "remove":
-    //verificação de indice = null
+    //verificação se o indice é hábito a passar para int
       if (args.length < 2 || int.tryParse(args[1]) == null) {
         print("Error: 'remove' requires a valid task index.");
         exit(1);
