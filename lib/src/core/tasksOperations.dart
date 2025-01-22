@@ -1,9 +1,17 @@
 import 'package:to_do_App/src/core/archives.dart';
+import 'dart:io';
 
-addTask() {}
+addTask() {
+  print("Describe your task:");
+  String taskInput = stdin.readLineSync() ?? "none";
 
-listTask() async {
-  Map<String, dynamic> tasks = await reciveArchive("../config/task.json");
+  addInArchive("../config/task.json", taskInput); 
+
+  print("\nTask added successfully!");
+}
+
+void listTask() async {
+  Map<String, dynamic> tasks = await jsonToMap("../config/task.json");
 
 
   if (tasks.isEmpty) {
