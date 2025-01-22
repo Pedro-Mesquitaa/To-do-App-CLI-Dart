@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'src/tasksOperations.dart';
-import 'src/archives.dart';
+import 'tasksOperations.dart';
+import 'archives.dart';
 
 void main(List<String> args) {
   
