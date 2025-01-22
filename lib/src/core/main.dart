@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'tasksOperations.dart';
 
-void main(List<String> args) {
+void main(List<String> args) async {
   
   //verifica se há argumentos, se não finaliza a aplicação e recomenda o uso de --help
   if (args.isEmpty) {
@@ -14,7 +14,7 @@ void main(List<String> args) {
     case "add":
     //todos comandos são encapsulados em blocos try-catch para evitar interrupções 
       try { 
-        addTask();
+        await addTask();
       } catch (e) {
         print("An error occurred while adding a task: $e");
         exit(1);
@@ -23,7 +23,7 @@ void main(List<String> args) {
 
     case "list-tasks":
       try {
-        listTask();
+        await listTask();
       } catch (e) {
         print("An error occurred while listing tasks: $e");
         exit(1);

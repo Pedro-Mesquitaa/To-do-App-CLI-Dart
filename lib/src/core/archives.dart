@@ -2,7 +2,7 @@ import '../utils/json.dart';
 
 //save(){} IMPLEMENTAR DEPOIS!
 
-void addInArchive(String archive, String task) async {
+Future<void> addInArchive(String archive, String task) async {
 
   var counter = await _addCounter();
 

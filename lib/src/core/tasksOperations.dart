@@ -2,16 +2,16 @@ import 'package:to_do_App/src/core/archives.dart';
 import '../utils/json.dart';
 import 'dart:io';
 
-addTask() {
+Future<void> addTask() async {
   print("Describe your task:");
   String taskInput = stdin.readLineSync() ?? "none";
 
-  addInArchive("../config/task.json", taskInput); 
+  await addInArchive("../config/task.json", taskInput); 
 
   print("\nTask added successfully!");
 }
 
-void listTask() async {
+Future<void> listTask() async {
   Map<String, dynamic> tasks = await jsonToMap("../config/task.json");
 
 
@@ -22,6 +22,10 @@ void listTask() async {
   }
 }
 
-checkTask(int index) {}
+checkTask(int index) {
+  //IMPLEMENTAR DEPOIS!!
+}
 
-removeTask(int index) {}
+removeTask(int index) {
+  //IMPLEMENTAR DEPOIS!!
+}
