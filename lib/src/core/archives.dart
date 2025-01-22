@@ -1,14 +1,6 @@
-import 'dart:convert';
-import 'dart:io';
+import '../utils/json.dart';
 
-save(){}
-
-Future<Map<String, dynamic>> jsonToMap(String archive) async {
-    final file = File(archive);
-    final jsonString = await file.readAsString();
-
-    return json.decode(jsonString);
-}
+//save(){} IMPLEMENTAR DEPOIS!
 
 void addInArchive(String archive, String task) async {
 
@@ -18,10 +10,7 @@ void addInArchive(String archive, String task) async {
 
   jsonFile.putIfAbsent(counter.toString(), () => task);
 
-  String jsonFileString = jsonEncode(jsonFile);
-  File fileJson = File(archive);
-
-  await fileJson.writeAsString(jsonFileString);
+  writeInJson(jsonFile, "../config/task.json");
 }
 
 Future<int> _addCounter() async{
@@ -35,9 +24,7 @@ Future<int> _addCounter() async{
 
   jsonFile.update("k", (value) => counterString[0]);
 
-  String jsonFileString = jsonEncode(jsonFile);
-  File fileJson = File("../config/counter.json");
-  await fileJson.writeAsString(jsonFileString);
+  writeInJson(jsonFile, "../config/counter.json");
 
   return counter;
 }
